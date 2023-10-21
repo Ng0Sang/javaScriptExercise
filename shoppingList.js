@@ -7,7 +7,7 @@ const port = 3000;
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-let shoppingList = [{name: "Yoghurt", price: 1000}, {name: "Milk", price: 500}, {name: "Fish", price: 1500}];
+let shoppingList = [{name: "Lappi", price: 1000000}, {name: "Headphones", price: 50000}, {name: "PS5", price: 50000}];
 
 // Route to GET the list of shopping items
 app.get('/', (req, res) => {
@@ -16,12 +16,8 @@ app.get('/', (req, res) => {
 
 // Route to POST an item to the shopping list
 app.post('/items', (req, res) => {
-  const newItem = {
-    name: req.body.name,
-    price: req.body.price,
-  };
-  shoppingList.push(newItem);
-  res.status(201).json(newItem);
+  shoppingList.push(req.body);
+  res.status(201).json(shoppingList);
 });
 
 // Route to GET a single item's name and price

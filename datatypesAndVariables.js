@@ -32,10 +32,6 @@ const total = bill + tip;
 
 console.log(`The total for bill and tip is $${total.toFixed(2)}.`)
 
-
-
-
-// Exercise 2
 // Mad Libs
 const adjective1 = "amazing";
 const adjective2 = "fun";

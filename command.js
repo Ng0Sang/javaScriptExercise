@@ -40,7 +40,7 @@ const handleCommandLineArgument = () => {
       return count;
     }, {});
     const mostPopularJoke = Object.entries(jokeCount).reduce((a, b) => (b[1] > a[1] ? b : a));
-    console.log('Most Popular Joke:', mostPopularJoke[0]);
+    console.log('Most Popular Joke:', mostPopularJoke[3]);
   } else if (args.length > 0) {
     getJoke(args[0]);
   } else {
